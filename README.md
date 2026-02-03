@@ -9,7 +9,7 @@ Enterprise-grade portfolio platform built with **Astro** + **Microfrontends**.
 ## 📋 Quick Start
 
 ### Prerequisites
-- Node.js ≥ 18
+- Node.js ≥ 20
 - pnpm ≥ 8
 
 ### Installation

@@ -4,7 +4,7 @@ Get the portfolio platform running in **5 minutes**.
 
 ## Prerequisites
 
-- **Node.js** ≥ 18 ([download](https://nodejs.org/))
+- **Node.js** ≥ 20 ([download](https://nodejs.org/))
 - **pnpm** ≥ 8 (install: `npm install -g pnpm`)
 - **Git** ([download](https://git-scm.com/))
 
