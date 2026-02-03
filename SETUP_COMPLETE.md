@@ -41,8 +41,8 @@ portfolio-platform/
 | App | Tech | Purpose | Deploy |
 |-----|------|---------|--------|
 | **astro-shell** | Astro + TypeScript | Main host, routing, landing | Vercel |
-| **mf-profile** | Angular 16 | Experience timeline | Cloudflare |
-| **mf-projects** | Angular 16 | Project showcase | Cloudflare |
+| **mf-profile** | Angular 20 | Experience timeline | Cloudflare |
+| **mf-projects** | Angular 20 | Project showcase | Cloudflare |
 | **mf-skills** | Vue 3 | Skills matrix | Cloudflare |
 | **storybook** | Web Components | Design system | Chromatic |
 
@@ -103,9 +103,10 @@ portfolio-platform/
 - Scalable monorepo structure
 
 ✅ **Framework expertise**
-- Angular 16 (your specialty)
+- Angular 20 (your specialty)
 - Vue 3 (versatility)
 - Astro (modern host)
+- Tailwind CSS (utility-first styling)
 - Web Components (framework agnostic)
 
 ✅ **System design**
@@ -362,6 +363,8 @@ pnpm dev
 - ✅ `eslint.config.js` (linting)
 - ✅ `prettier.config.js` (formatting)
 - ✅ `lint-staged.config.js` (pre-commit)
+- ✅ `tailwind.config.js` (Tailwind config)
+- ✅ `postcss.config.js` (PostCSS config)
 - ✅ `.prettierignore`
 - ✅ `.eslintignore`
 - ✅ `.gitignore`

@@ -60,6 +60,8 @@ portfolio-platform/
 ✅ eslint.config.js              ESLint rules for code quality
 ✅ prettier.config.js            Code formatting configuration
 ✅ lint-staged.config.js         Pre-commit hooks setup
+✅ tailwind.config.js            Tailwind CSS configuration
+✅ postcss.config.js             PostCSS configuration
 ✅ .prettierignore                Prettier ignore patterns
 ✅ .eslintignore                 ESLint ignore patterns
 ✅ .gitignore                    Git ignore patterns

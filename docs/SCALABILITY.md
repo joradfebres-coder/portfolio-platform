@@ -322,8 +322,8 @@ shared: {
 
 ### Technology Upgrades
 ```
-Current: Angular 16, Vue 3, Astro 3
-Future:  Angular 17+, Vue 4?, Astro 5?
+Current: Angular 20, Vue 3, Astro 3
+Future:  Angular 21+, Vue 4?, Astro 5?
 
 Thanks to Web Components bridge and shared types,
 **no major refactoring needed**

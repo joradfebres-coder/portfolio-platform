@@ -271,11 +271,12 @@ See [docs/ADR/](docs/ADR/) for detailed Architecture Decision Records:
 
 | Layer | Technologies |
 |-------|--------------|
-| **Host** | Astro, TypeScript, CSS |
-| **MF 1-2** | Angular 16+, NGRX, RxJS |
+| **Host** | Astro, TypeScript |
+| **MF 1-2** | Angular 20+, NGRX, RxJS |
 | **MF 3** | Vue 3, Composition API |
 | **Design System** | Web Components, Storybook |
-| **Shared** | TypeScript, Design Tokens |
+| **Styling** | Tailwind CSS, Design Tokens |
+| **Shared** | TypeScript |
 | **Testing** | Jest, Jasmine, Vitest |
 | **Linting** | ESLint, Prettier |
 | **CI/CD** | GitHub Actions |

@@ -183,6 +183,8 @@ portfolio-platform/
 │  ├── eslint.config.js                   ← Linting rules
 │  ├── prettier.config.js                 ← Code formatting
 │  ├── lint-staged.config.js              ← Pre-commit hooks
+│  ├── tailwind.config.js                 ← Tailwind config
+│  ├── postcss.config.js                  ← PostCSS config
 │  ├── .prettierignore                    ← Prettier ignore
 │  ├── .eslintignore                      ← ESLint ignore
 │  ├── .gitignore                         ← Git ignore
