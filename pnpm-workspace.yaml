@@ -1,0 +1,10 @@
+packages:
+  - 'apps/*'
+  - 'libs/*'
+
+# Strict peer dependency handling
+strictPeerDependencies: true
+
+# Shared dependencies across workspace
+overrides:
+  typescript: ^5.3.3

@@ -1,0 +1,254 @@
+portfolio-platform/
+│
+├── 📋 README.md                          ← START HERE
+├── ⚡ QUICKSTART.md                      ← 5-minute setup
+│
+├── 📁 apps/                              ← Deployed applications
+│  ├── astro-shell/                       [MAIN HOST]
+│  │  ├── src/
+│  │  │  ├── pages/
+│  │  │  │  ├── index.astro              ← Landing page
+│  │  │  │  ├── about.astro
+│  │  │  │  ├── profile.astro             ← Loads MF-Profile
+│  │  │  │  ├── projects.astro            ← Loads MF-Projects
+│  │  │  │  ├── skills.astro              ← Loads MF-Skills
+│  │  │  │  └── blog/
+│  │  │  │     └── [slug].astro
+│  │  │  ├── components/
+│  │  │  │  ├── Navigation.astro
+│  │  │  │  ├── Footer.astro
+│  │  │  │  └── MFIsland.astro            ← Generic MF loader
+│  │  │  ├── layouts/
+│  │  │  │  └── MainLayout.astro
+│  │  │  └── styles/
+│  │  │     └── global.css
+│  │  ├── astro.config.mjs
+│  │  ├── package.json
+│  │  └── tsconfig.json
+│  │
+│  ├── mf-profile/                        [ANGULAR MF]
+│  │  ├── src/
+│  │  │  ├── app/
+│  │  │  │  ├── experience/
+│  │  │  │  │  ├── experience.component.ts
+│  │  │  │  │  ├── experience.component.html
+│  │  │  │  │  └── experience.store.ts    ← NGRX
+│  │  │  │  ├── profile.component.ts      ← Root component
+│  │  │  │  └── app.module.ts
+│  │  │  ├── main.ts
+│  │  │  └── bootstrap.ts
+│  │  ├── module-federation.config.ts
+│  │  ├── webpack.config.js
+│  │  ├── package.json
+│  │  └── tsconfig.json
+│  │
+│  ├── mf-projects/                       [ANGULAR MF]
+│  │  ├── src/
+│  │  │  ├── app/
+│  │  │  │  ├── project-list/
+│  │  │  │  │  ├── project-list.component.ts
+│  │  │  │  │  └── project-card.component.ts
+│  │  │  │  ├── projects.component.ts     ← Root component
+│  │  │  │  └── app.module.ts
+│  │  │  ├── main.ts
+│  │  │  └── bootstrap.ts
+│  │  ├── module-federation.config.ts
+│  │  ├── webpack.config.js
+│  │  ├── package.json
+│  │  └── tsconfig.json
+│  │
+│  ├── mf-skills/                         [VUE 3 MF]
+│  │  ├── src/
+│  │  │  ├── components/
+│  │  │  │  ├── SkillsMatrix.vue
+│  │  │  │  ├── SkillBar.vue
+│  │  │  │  └── VersionPicker.vue
+│  │  │  ├── stores/
+│  │  │  │  └── skillsStore.ts            ← Pinia
+│  │  │  ├── App.vue                      ← Root component
+│  │  │  └── main.ts
+│  │  ├── vite.config.ts
+│  │  ├── module-federation.config.ts
+│  │  ├── package.json
+│  │  └── tsconfig.json
+│  │
+│  └── storybook/                         [DESIGN SYSTEM]
+│     ├── stories/
+│     │  ├── Button.stories.ts
+│     │  ├── Card.stories.ts
+│     │  ├── Badge.stories.ts
+│     │  └── ... (more components)
+│     ├── .storybook/
+│     │  ├── main.ts
+│     │  └── preview.ts
+│     ├── package.json
+│     └── tsconfig.json
+│
+├── 📁 libs/                              ← Shared code (not deployed)
+│  ├── design-tokens/                     [CSS TOKENS]
+│  │  ├── src/
+│  │  │  ├── index.css                    ← Main export
+│  │  │  ├── colors.css
+│  │  │  ├── typography.css
+│  │  │  ├── spacing.css
+│  │  │  ├── shadows.css
+│  │  │  └── breakpoints.css
+│  │  ├── tokens.json                     ← Single source of truth
+│  │  ├── package.json
+│  │  ├── tsconfig.json
+│  │  └── README.md
+│  │
+│  ├── ui-components/                     [WEB COMPONENTS]
+│  │  ├── src/
+│  │  │  ├── components/
+│  │  │  │  ├── button/
+│  │  │  │  │  ├── button.ts              ← Web Component
+│  │  │  │  │  ├── button.styles.css
+│  │  │  │  │  └── button.test.ts
+│  │  │  │  ├── card/
+│  │  │  │  ├── badge/
+│  │  │  │  └── ... (more components)
+│  │  │  ├── angular/                     ← Framework wrappers
+│  │  │  │  ├── button.component.ts
+│  │  │  │  ├── card.component.ts
+│  │  │  │  └── index.ts
+│  │  │  ├── vue/
+│  │  │  │  ├── Button.vue
+│  │  │  │  ├── Card.vue
+│  │  │  │  └── index.ts
+│  │  │  └── index.ts                    ← Barrel exports
+│  │  ├── stories/
+│  │  │  ├── Button.stories.ts
+│  │  │  └── Card.stories.ts
+│  │  ├── package.json
+│  │  ├── tsconfig.json
+│  │  └── README.md
+│  │
+│  ├── shared-types/                      [TYPESCRIPT TYPES]
+│  │  ├── src/
+│  │  │  ├── models/
+│  │  │  │  ├── experience.types.ts
+│  │  │  │  ├── project.types.ts
+│  │  │  │  ├── skill.types.ts
+│  │  │  │  └── timeline.types.ts
+│  │  │  ├── api/
+│  │  │  │  ├── responses.types.ts
+│  │  │  │  └── requests.types.ts
+│  │  │  ├── ui/
+│  │  │  │  └── component-props.types.ts
+│  │  │  └── index.ts                    ← Barrel exports
+│  │  ├── package.json
+│  │  ├── tsconfig.json
+│  │  └── README.md
+│  │
+│  └── utils/                             [UTILITY FUNCTIONS]
+│     ├── src/
+│     │  ├── array/
+│     │  │  ├── groupBy.ts
+│     │  │  ├── unique.ts
+│     │  │  └── index.ts
+│     │  ├── date/
+│     │  │  ├── formatDate.ts
+│     │  │  ├── calculateYears.ts
+│     │  │  └── index.ts
+│     │  ├── string/
+│     │  │  ├── slugify.ts
+│     │  │  └── index.ts
+│     │  └── index.ts                    ← Barrel exports
+│     ├── src/__tests__/
+│     │  └── (mirror structure with .test.ts)
+│     ├── package.json
+│     ├── tsconfig.json
+│     └── README.md
+│
+├── 📁 docs/                              ← Documentation
+│  ├── ADR/                               [Architecture Decision Records]
+│  │  ├── 001-astro-as-shell.md           ← Why Astro
+│  │  ├── 002-mf-versioning.md            ← Version strategy
+│  │  └── 003-web-components.md           ← Component bridge
+│  ├── ARCHITECTURE.md                    ← System design
+│  ├── DEPLOYMENT.md                      ← Deploy to production
+│  ├── SCALABILITY.md                     ← How to grow
+│  └── VERSIONING.md                      ← MF version guide
+│
+├── 📁 .github/
+│  └── workflows/
+│     ├── build-and-test.yml              ← CI/CD pipeline
+│     └── deploy.yml                      ← Deployment workflow
+│
+├── 🔧 Configuration Files
+│  ├── package.json                       ← Monorepo root
+│  ├── pnpm-workspace.yaml                ← Workspace config
+│  ├── tsconfig.json                      ← TypeScript config
+│  ├── eslint.config.js                   ← Linting rules
+│  ├── prettier.config.js                 ← Code formatting
+│  ├── lint-staged.config.js              ← Pre-commit hooks
+│  ├── .prettierignore                    ← Prettier ignore
+│  ├── .eslintignore                      ← ESLint ignore
+│  ├── .gitignore                         ← Git ignore
+│  └── .editorconfig                      ← Editor settings
+│
+└── 📄 Root Documentation
+   ├── README.md                          ← Main guide
+   └── QUICKSTART.md                      ← 5-minute setup
+
+
+═════════════════════════════════════════════════════════════════════════════════
+
+📊 SUMMARY
+
+Apps (Deployed Independently):
+  ✅ astro-shell          → Vercel              (Landing, routing, pages)
+  ✅ mf-profile          → Cloudflare Pages     (Experience timeline)
+  ✅ mf-projects         → Cloudflare Pages     (Project showcase)
+  ✅ mf-skills           → Cloudflare Pages     (Skills matrix)
+  ✅ storybook           → Chromatic            (Design system)
+
+Shared Libraries (Not Deployed, Used by Apps):
+  ✅ design-tokens       (CSS custom properties)
+  ✅ ui-components       (Web Components + wrappers)
+  ✅ shared-types        (TypeScript types)
+  ✅ utils               (Helper functions)
+
+Documentation:
+  ✅ README.md           (Main entry point)
+  ✅ QUICKSTART.md       (5-minute setup)
+  ✅ ARCHITECTURE.md     (System design)
+  ✅ DEPLOYMENT.md       (Production guide)
+  ✅ SCALABILITY.md      (Growth guide)
+  ✅ ADR/                (Design decisions)
+
+Configuration:
+  ✅ pnpm workspaces     (Package management)
+  ✅ TypeScript paths    (Clean imports)
+  ✅ ESLint + Prettier   (Code quality)
+  ✅ GitHub Actions      (CI/CD)
+
+═════════════════════════════════════════════════════════════════════════════════
+
+🎯 KEY FEATURES
+
+✅ Zero Cost Hosting          Vercel + Cloudflare Pages
+✅ Enterprise Architecture    Microfrontends with versioning
+✅ Monorepo Setup            pnpm workspaces + TypeScript paths
+✅ Design System             Storybook + Web Components
+✅ Type Safety               Strict TypeScript
+✅ Code Quality              ESLint + Prettier + pre-commit hooks
+✅ CI/CD Pipeline            GitHub Actions automated
+✅ Documented Decisions      3 ADRs + architecture guide
+✅ Scalable                  Easy to add new experiences
+✅ Framework Flexible        Angular + Vue + Astro
+
+═════════════════════════════════════════════════════════════════════════════════
+
+🚀 NEXT STEPS
+
+1. Read QUICKSTART.md         (5 minutes)
+2. Read ARCHITECTURE.md       (10 minutes)
+3. Read ADR/ (001-003)        (15 minutes)
+4. Run: pnpm install
+5. Run: pnpm dev
+6. Open: http://localhost:3000
+7. Start building!
+
+═════════════════════════════════════════════════════════════════════════════════

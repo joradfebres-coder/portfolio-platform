@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Strictness */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+
+    /* Error reporting */
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Path mapping for monorepo */
+    "baseUrl": ".",
+    "paths": {
+      "@portfolio/*": ["libs/*/src"],
+      "@portfolio/design-tokens": ["libs/design-tokens/src"],
+      "@portfolio/ui-components": ["libs/ui-components/src"],
+      "@portfolio/shared-types": ["libs/shared-types/src"],
+      "@portfolio/utils": ["libs/utils/src"]
+    }
+  },
+  "include": ["apps/*/src", "libs/*/src"],
+  "exclude": ["node_modules", "dist", "build"]
+}
