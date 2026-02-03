@@ -1,0 +1,132 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+// Calcular años de experiencia desde 2018
+const startYear = 2018;
+const currentYear = new Date().getFullYear();
+const yearsOfExperience = currentYear - startYear;
+---
+
+<MainLayout title="Inicio">
+  <Navigation />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white min-h-screen flex items-center">
+      <!-- Animated background elements -->
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s"></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl">
+          <div class="mb-6 inline-block">
+            <span class="px-4 py-2 rounded-full bg-blue-500/20 border border-blue-400/30 text-sm font-semibold text-blue-200">
+              👋 Bienvenido
+            </span>
+          </div>
+          
+          <h1 class="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+            Frontend <span class="bg-gradient-to-r from-blue-400 via-blue-300 to-cyan-300 bg-clip-text text-transparent">Architect</span>
+          </h1>
+          
+          <p class="text-xl md:text-2xl mb-6 text-blue-100 max-w-2xl leading-relaxed">
+            Especialista en arquitecturas escalables con <strong>Microfrontends</strong>, 
+            <strong>Angular 20+</strong> y <strong>Design Systems</strong>. 
+            {yearsOfExperience}+ años liderando proyectos enterprise en banca, salud y telecomunicaciones.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="/projects"
+              class="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white no-underline transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            >
+              Ver Proyectos
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+            
+            <a
+              href="/about"
+              class="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold bg-white/10 hover:bg-white/20 text-white border border-white/20 no-underline transition-all duration-300 backdrop-blur-sm"
+            >
+              Conocer más
+            </a>
+          </div>
+
+          <!-- Stats -->
+          <div class="mt-20 grid grid-cols-3 gap-8 pt-12 border-t border-white/10">
+            <div>
+              <div class="text-4xl font-bold text-blue-300">{yearsOfExperience}+</div>
+              <div class="text-blue-100 mt-2">Años de experiencia</div>
+            </div>
+            <div>
+              <div class="text-4xl font-bold text-cyan-300">6</div>
+              <div class="text-blue-100 mt-2">Equipos liderados</div>
+            </div>
+            <div>
+              <div class="text-4xl font-bold text-blue-300">20+</div>
+              <div class="text-blue-100 mt-2">Proyectos completados</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Highlight -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl font-bold mb-4">Especialidades</h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Expertise en arquitecturas modernas y escalables
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Microfrontends -->
+          <div class="group p-8 rounded-xl bg-gradient-to-br from-slate-50 to-slate-100 hover:from-blue-50 hover:to-cyan-50 transition-all duration-300 border border-slate-200 hover:border-blue-300 hover:shadow-lg">
+            <div class="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">🏗️</div>
+            <h3 class="text-2xl font-bold mb-3 text-gray-900">Microfrontends</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Module Federation, Single SPA y arquitecturas escalables para aplicaciones enterprise de máxima complejidad.
+            </p>
+            <div class="mt-4 pt-4 border-t border-gray-200">
+              <span class="text-sm font-semibold text-blue-600">Module Federation • Single SPA • Versionado</span>
+            </div>
+          </div>
+
+          <!-- Frontend Frameworks -->
+          <div class="group p-8 rounded-xl bg-gradient-to-br from-slate-50 to-slate-100 hover:from-orange-50 hover:to-red-50 transition-all duration-300 border border-slate-200 hover:border-orange-300 hover:shadow-lg">
+            <div class="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">⚛️</div>
+            <h3 class="text-2xl font-bold mb-3 text-gray-900">Angular & Vue.js</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Experto en Angular (9-20) y Vue 3. Dominio profundo de NGRX, Pinia, state management avanzado.
+            </p>
+            <div class="mt-4 pt-4 border-t border-gray-200">
+              <span class="text-sm font-semibold text-orange-600">Angular • Vue • NGRX • RxJS</span>
+            </div>
+          </div>
+
+          <!-- Design Systems -->
+          <div class="group p-8 rounded-xl bg-gradient-to-br from-slate-50 to-slate-100 hover:from-purple-50 hover:to-pink-50 transition-all duration-300 border border-slate-200 hover:border-purple-300 hover:shadow-lg">
+            <div class="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">🎨</div>
+            <h3 class="text-2xl font-bold mb-3 text-gray-900">Design Systems</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Storybook, Atomic Design y Web Components para sistemas de diseño escalables y consistentes.
+            </p>
+            <div class="mt-4 pt-4 border-t border-gray-200">
+              <span class="text-sm font-semibold text-purple-600">Storybook • Web Components • Tailwind</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</MainLayout>

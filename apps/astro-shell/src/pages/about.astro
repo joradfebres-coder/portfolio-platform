@@ -1,0 +1,140 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<MainLayout title="Acerca de" description="Conoce más sobre Jorge Febres">
+  <Navigation />
+
+  <main class="py-16">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold mb-4">Acerca de mí</h1>
+        <p class="text-xl text-gray-600">
+          Frontend Architect con pasión por crear soluciones escalables
+        </p>
+      </div>
+
+      <!-- Bio -->
+      <section class="mb-12 bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">👨‍💻 Perfil Profesional</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          Soy un desarrollador Frontend con más de <strong>8 años de experiencia</strong> en la
+          construcción de aplicaciones web escalables. Me especializo en <strong
+            >Angular y Vue.js</strong
+          >, con amplia experiencia en <strong>micro-frontends</strong>, <strong
+            >design systems</strong
+          > y arquitectura limpia.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          He liderado equipos de hasta <strong>6 desarrolladores</strong> en proyectos bancarios,
+          de salud y telecomunicaciones, logrando mejorar la calidad del software y reducir tiempos
+          de entrega. Mi enfoque está en crear soluciones que sean mantenibles, escalables y que
+          sigan las mejores prácticas de la industria.
+        </p>
+      </section>
+
+      <!-- Skills -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">🛠️ Habilidades Técnicas</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="font-bold mb-3 text-blue-600">Frontend</h3>
+            <ul class="text-sm text-gray-700 space-y-1">
+              <li>• Angular (9-20)</li>
+              <li>• Vue.js (Options API, Composition API)</li>
+              <li>• React.js</li>
+              <li>• TypeScript</li>
+              <li>• HTML5, CSS3</li>
+              <li>• Tailwind, Sass, Bootstrap</li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="font-bold mb-3 text-blue-600">Arquitectura</h3>
+            <ul class="text-sm text-gray-700 space-y-1">
+              <li>• Module Federation</li>
+              <li>• Single SPA</li>
+              <li>• NGRX / Redux</li>
+              <li>• State Management</li>
+              <li>• Clean Architecture</li>
+              <li>• Design Systems</li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="font-bold mb-3 text-blue-600">Testing & Quality</h3>
+            <ul class="text-sm text-gray-700 space-y-1">
+              <li>• Jest</li>
+              <li>• Jasmine</li>
+              <li>• Storybook</li>
+              <li>• ESLint</li>
+              <li>• Prettier</li>
+              <li>• Code Review</li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="font-bold mb-3 text-blue-600">Herramientas & CI/CD</h3>
+            <ul class="text-sm text-gray-700 space-y-1">
+              <li>• Git (Gitflow, trunk-based)</li>
+              <li>• Jenkins</li>
+              <li>• Azure DevOps</li>
+              <li>• Bitbucket</li>
+              <li>• GitHub Actions</li>
+              <li>• Docker</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="mb-12 bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">🎓 Formación Académica</h2>
+        <ul class="space-y-3 text-gray-700">
+          <li>
+            <strong>Bachiller en Ingeniería de Sistemas e Informática</strong><br />
+            Universidad Tecnológica del Perú (2012-2018)
+          </li>
+          <li>
+            <strong>Bootcamp Desarrollo Web (Front y Back-end, Scrum)</strong><br />
+            CodiGo, TECSUP (2018-2019)
+          </li>
+          <li>
+            <strong>CCNA - Networking</strong><br />
+            TECSUP (2018-2019)
+          </li>
+        </ul>
+      </section>
+
+      <!-- Idiomas -->
+      <section class="mb-12 bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">🌍 Idiomas</h2>
+        <ul class="space-y-2 text-gray-700">
+          <li><strong>Español:</strong> Nativo</li>
+          <li><strong>Inglés:</strong> B2 (en proceso de mejora hacia C1)</li>
+        </ul>
+      </section>
+
+      <!-- CTA -->
+      <div class="text-center">
+        <a
+          href="/profile"
+          class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors no-underline mr-4"
+        >
+          Ver mi experiencia →
+        </a>
+        <a
+          href="/projects"
+          class="inline-block bg-gray-200 text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors no-underline"
+        >
+          Ver proyectos →
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</MainLayout>
